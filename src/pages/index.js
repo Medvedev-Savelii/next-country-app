@@ -6,6 +6,7 @@ import CountriesTable from "../components/CountriesTable/CountriesTable";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ countries }) {
+  console.log(countries);
   return (
     <Layout>
       <div className={styles.inputContainer}>
@@ -14,7 +15,7 @@ export default function Home({ countries }) {
           <SearchInput placeholder="Filter by Name, Region or SubRegion" />
         </div>
       </div>
-      <CountriesTable />
+      <CountriesTable countries={countries} />
     </Layout>
   );
 }
